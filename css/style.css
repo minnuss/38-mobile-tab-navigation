@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+body .navigation {
+  position: relative;
+  font-size: 1.3rem;
+  width: 350px;
+  height: 600px;
+  border: 2px solid #2c3e50;
+  border-radius: 10px;
+}
+
+body .navigation .img-box {
+  position: relative;
+  background-color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body .navigation .img-box img {
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body .navigation .img-box img.active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  width: 100%;
+  height: calc(100% - 62px);
+}
+
+body .navigation .controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-top: 2px solid #2c3e50;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+body .navigation .controls > * {
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+body .navigation .controls > *:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 350px) {
+  body .navigation {
+    width: 100%;
+    height: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
